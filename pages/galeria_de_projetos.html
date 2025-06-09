@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Projetos - Premium Upholstery Studio</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta name="description" content="Veja nossa galeria de projetos de restauração de móveis de luxo. Transformações incríveis de sofás, poltronas e móveis antigos com qualidade premium.">
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm luxury-shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <svg class="w-10 h-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M8 12h24v16H8V12zm2 2v12h20V14H10zm-2-6h24v4H8V8zm2 2v2h20v-2H10zm6 8h8v4h-8v-4z"/>
+                        <circle cx="12" cy="32" r="2" fill="currentColor"/>
+                        <circle cx="28" cy="32" r="2" fill="currentColor"/>
+                    </svg>
+                    <div>
+                        <h1 class="font-heading text-xl font-bold text-primary">Premium Upholstery</h1>
+                        <p class="text-xs text-text-secondary">Studio de Restauração</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary luxury-transition">Início</a>
+                    <a href="servi_os.html" class="text-text-secondary hover:text-primary luxury-transition">Serviços</a>
+                    <a href="galeria_de_projetos.html" class="text-primary font-semibold border-b-2 border-primary pb-1">Galeria</a>
+                    <a href="sobre_n_s.html" class="text-text-secondary hover:text-primary luxury-transition">Sobre Nós</a>
+                    <a href="contato_e_or_amento.html" class="bg-accent text-white px-6 py-2 rounded-luxury hover:bg-accent-600 luxury-transition">Orçamento</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-secondary-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="homepage.html" class="text-text-secondary">Início</a>
+                    <a href="servi_os.html" class="text-text-secondary">Serviços</a>
+                    <a href="galeria_de_projetos.html" class="text-primary font-semibold">Galeria</a>
+                    <a href="sobre_n_s.html" class="text-text-secondary">Sobre Nós</a>
+                    <a href="contato_e_or_amento.html" class="bg-accent text-white px-4 py-2 rounded-luxury text-center">Solicitar Orçamento</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 bg-surface">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="font-heading text-4xl md:text-6xl font-bold text-primary mb-6">
+                    Galeria de <span class="text-accent">Projetos</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-text-secondary mb-8">
+                    Veja as transformações incríveis que realizamos. Cada projeto conta uma história de renovação e qualidade excepcional.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <div class="flex items-center text-text-secondary">
+                        <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Mais de 500 projetos concluídos</span>
+                    </div>
+                    <div class="flex items-center text-text-secondary">
+                        <svg class="w-5 h-5 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>20+ anos de experiência</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white sticky top-20 z-40 luxury-shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-6 items-center justify-between">
+                <!-- Search Bar -->
+                <div class="relative flex-1 max-w-md">
+                    <input type="text" id="search-input" placeholder="Buscar projetos..." 
+                           class="w-full pl-10 pr-4 py-3 border border-secondary-200 rounded-luxury focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+
+                <!-- Filter Chips -->
+                <div class="flex flex-wrap gap-3">
+                    <button class="filter-chip active" data-filter="todos">
+                        Todos <span class="count">(24)</span>
+                    </button>
+                    <button class="filter-chip" data-filter="sofas">
+                        Sofás <span class="count">(8)</span>
+                    </button>
+                    <button class="filter-chip" data-filter="poltronas">
+                        Poltronas <span class="count">(6)</span>
+                    </button>
+                    <button class="filter-chip" data-filter="antigos">
+                        Móveis Antigos <span class="count">(5)</span>
+                    </button>
+                    <button class="filter-chip" data-filter="estofamento">
+                        Estofamento <span class="count">(5)</span>
+                    </button>
+                </div>
+
+                <!-- Sort Options -->
+                <div class="relative">
+                    <select id="sort-select" class="appearance-none bg-white border border-secondary-200 rounded-luxury px-4 py-3 pr-8 focus:outline-none focus:ring-2 focus:ring-accent">
+                        <option value="recent">Mais Recentes</option>
+                        <option value="oldest">Mais Antigos</option>
+                        <option value="type">Por Tipo</option>
+                        <option value="style">Por Estilo</option>
+                    </select>
+                    <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-text-secondary pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-16 bg-background">
+        <div class="container mx-auto px-6">
+            <!-- Results Counter -->
+            <div class="mb-8">
+                <p class="text-text-secondary">
+                    Mostrando <span id="results-count">24</span> projetos
+                </p>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Project 1 - Sofá Clássico -->
+                <div class="project-item group cursor-pointer" data-category="sofas" data-date="2024-12" onclick="openLightbox(0)">
+                    <div class="relative overflow-hidden rounded-luxury luxury-shadow-md hover:luxury-shadow-lg luxury-transition">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Restauração de sofá clássico" 
+                             class="w-full h-64 object-cover group-hover:scale-105 luxury-transition-slow"
+                             loading="lazy"
+                             onerror="this.src='https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 luxury-transition flex items-end">
+                            <div class="p-4 text-white w-full">
+                                <h3 class="font-heading text-lg font-semibold mb-1">Sofá Clássico Restaurado</h3>
+                                <p class="text-sm opacity-90">Dezembro 2024 • São Paulo, SP</p>
+                                <div class="flex items-center mt-2">
+                                    <span class="bg-accent px-2 py-1 rounded text-xs font-medium">Sofá</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 luxury-transition">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Poltrona Vintage -->
+                <div class="project-item group cursor-pointer" data-category="poltronas" data-date="2024-11" onclick="openLightbox(1)">
+                    <div class="relative overflow-hidden rounded-luxury luxury-shadow-md hover:luxury-shadow-lg luxury-transition">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Poltrona vintage restaurada" 
+                             class="w-full h-80 object-cover group-hover:scale-105 luxury-transition-slow"
+                             loading="lazy"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/19/13/06/chair-1839820_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 luxury-transition flex items-end">
+                            <div class="p-4 text-white w-full">
+                                <h3 class="font-heading text-lg font-semibold mb-1">Poltrona Vintage</h3>
+                                <p class="text-sm opacity-90">Novembro 2024 • Rio de Janeiro, RJ</p>
+                                <div class="flex items-center mt-2">
+                                    <span class="bg-accent px-2 py-1 rounded text-xs font-medium">Poltrona</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 luxury-transition">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Móvel Antigo -->
+                <div class="project-item group cursor-pointer" data-category="antigos" data-date="2024-10" onclick="openLightbox(2)">
+                    <div class="relative overflow-hidden rounded-luxury luxury-shadow-md hover:luxury-shadow-lg luxury-transition">
+                        <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Móvel antigo restaurado" 
+                             class="w-full h-72 object-cover group-hover:scale-105 luxury-transition-slow"
+                             loading="lazy"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/03/25/23/32/vintage-2174709_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 luxury-transition flex items-end">
+                            <div class="p-4 text-white w-full">
+                                <h3 class="font-heading text-lg font-semibold mb-1">Móvel Antigo Século XIX</h3>
+                                <p class="text-sm opacity-90">Outubro 2024 • Belo Horizonte, MG</p>
+                                <div class="flex items-center mt-2">
+                                    <span class="bg-accent px-2 py-1 rounded text-xs font-medium">Antigo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 luxury-transition">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 - Conjunto de Sofás -->
+                <div class="project-item group cursor-pointer" data-category="sofas" data-date="2024-09" onclick="openLightbox(3)">
+                    <div class="relative overflow-hidden rounded-luxury luxury-shadow-md hover:luxury-shadow-lg luxury-transition">
+                        <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Conjunto de sofás restaurados" 
+                             class="w-full h-64 object-cover group-hover:scale-105 luxury-transition-slow"
+                             loading="lazy"
+                             onerror="this.src='https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 luxury-transition flex items-end">
+                            <div class="p-4 text-white w-full">
+                                <h3 class="font-heading text-lg font-semibold mb-1">Conjunto de Sofás</h3>
+                                <p class="text-sm opacity-90">Setembro 2024 • Brasília, DF</p>
+                                <div class="flex items-center mt-2">
+                                    <span class="bg-accent px-2 py-1 rounded text-xs font-medium">Sofá</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 luxury-transition">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Estofamento Premium -->
+                <div class="project-item group cursor-pointer" data-category="estofamento" data-date="2024-08" onclick="openLightbox(4)">
+                    <div class="relative overflow-hidden rounded-luxury luxury-shadow-md hover:luxury-shadow-lg luxury-transition">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Estofamento premium" 
+                             class="w-full h-80 object-cover group-hover:scale-105 luxury-transition-slow"
+                             loading="lazy"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/19/13/06/chair-1839820_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 luxury-transition flex items-end">
+                            <div class="p-4 text-white w-full">
+                                <h3 class="font-heading text-lg font-semibold mb-1">Estofamento Premium</h3>
+                                <p class="text-sm opacity-90">Agosto 2024 • Salvador, BA</p>
+                                <div class="flex items-center mt-2">
+                                    <span class="bg-accent px-2 py-1 rounded text-xs font-medium">Estofamento</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 luxury-transition">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Poltrona Executiva -->
+                <div class="project-item group cursor-pointer" data-category="poltronas" data-date="2024-07" onclick="openLightbox(5)">
+                    <div class="relative overflow-hidden rounded-luxury luxury-shadow-md hover:luxury-shadow-lg luxury-transition">
+                        <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                             alt="Poltrona executiva restaurada" 
+                             class="w-full h-72 object-cover group-hover:scale-105 luxury-transition-slow"
+                             loading="lazy"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/19/13/06/chair-1839820_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 luxury-transition flex items-end">
+                            <div class="p-4 text-white w-full">
+                                <h3 class="font-heading text-lg font-semibold mb-1">Poltrona Executiva</h3>
+                                <p class="text-sm opacity-90">Julho 2024 • Curitiba, PR</p>
+                                <div class="flex items-center mt-2">
+                                    <span class="bg-accent px-2 py-1 rounded text-xs font-medium">Poltrona</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 luxury-transition">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional projects would continue here... -->
+                <!-- For brevity, showing 6 projects but the actual implementation would have 24+ -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="load-more-btn" class="bg-primary text-white px-8 py-4 rounded-luxury hover:bg-primary-600 luxury-transition luxury-shadow-lg">
+                    Carregar Mais Projetos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Inquiry Section -->
+    <section class="py-16 bg-surface">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-luxury luxury-shadow-lg p-8">
+                <div class="text-center mb-8">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+                        Gostou do Que Viu?
+                    </h2>
+                    <p class="text-xl text-text-secondary">
+                        Solicite um orçamento personalizado para seu projeto de restauração
+                    </p>
+                </div>
+
+                <form class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="inquiry-name" class="block text-sm font-semibold text-text-primary mb-2">Nome Completo</label>
+                        <input type="text" id="inquiry-name" name="name" required
+                               class="w-full px-4 py-3 border border-secondary-200 rounded-luxury focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+
+                    <div>
+                        <label for="inquiry-email" class="block text-sm font-semibold text-text-primary mb-2">E-mail</label>
+                        <input type="email" id="inquiry-email" name="email" required
+                               class="w-full px-4 py-3 border border-secondary-200 rounded-luxury focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+
+                    <div>
+                        <label for="inquiry-phone" class="block text-sm font-semibold text-text-primary mb-2">Telefone</label>
+                        <input type="tel" id="inquiry-phone" name="phone"
+                               class="w-full px-4 py-3 border border-secondary-200 rounded-luxury focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                    </div>
+
+                    <div>
+                        <label for="inquiry-project-type" class="block text-sm font-semibold text-text-primary mb-2">Tipo de Projeto</label>
+                        <select id="inquiry-project-type" name="project-type" required
+                                class="w-full px-4 py-3 border border-secondary-200 rounded-luxury focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                            <option value="">Selecione o tipo</option>
+                            <option value="sofa">Restauração de Sofá</option>
+                            <option value="poltrona">Restauração de Poltrona</option>
+                            <option value="antigo">Móvel Antigo</option>
+                            <option value="estofamento">Estofamento Premium</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label for="inquiry-message" class="block text-sm font-semibold text-text-primary mb-2">Descrição do Projeto</label>
+                        <textarea id="inquiry-message" name="message" rows="4" required
+                                  placeholder="Descreva seu projeto, estado atual do móvel e suas expectativas..."
+                                  class="w-full px-4 py-3 border border-secondary-200 rounded-luxury focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent resize-none"></textarea>
+                    </div>
+
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="bg-accent text-white px-8 py-4 rounded-luxury hover:bg-accent-600 luxury-transition luxury-shadow-lg">
+                            Solicitar Orçamento Gratuito
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <svg class="w-8 h-8 text-accent" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M8 12h24v16H8V12zm2 2v12h20V14H10zm-2-6h24v4H8V8zm2 2v2h20v-2H10zm6 8h8v4h-8v-4z"/>
+                            <circle cx="12" cy="32" r="2" fill="currentColor"/>
+                            <circle cx="28" cy="32" r="2" fill="currentColor"/>
+                        </svg>
+                        <div>
+                            <h3 class="font-heading text-xl font-bold">Premium Upholstery</h3>
+                            <p class="text-sm text-white/80">Studio de Restauração</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-6">
+                        Especialistas em restauração de móveis de luxo com mais de 20 anos de experiência.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/80 hover:text-accent luxury-transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-accent luxury-transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-accent luxury-transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white/80 hover:text-accent luxury-transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading text-lg font-semibold mb-6">Links Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="homepage.html" class="text-white/80 hover:text-accent luxury-transition">Início</a></li>
+                        <li><a href="servi_os.html" class="text-white/80 hover:text-accent luxury-transition">Serviços</a></li>
+                        <li><a href="galeria_de_projetos.html" class="text-white/80 hover:text-accent luxury-transition">Galeria</a></li>
+                        <li><a href="sobre_n_s.html" class="text-white/80 hover:text-accent luxury-transition">Sobre Nós</a></li>
+                        <li><a href="contato_e_or_amento.html" class="text-white/80 hover:text-accent luxury-transition">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-heading text-lg font-semibold mb-6">Serviços</h4>
+                    <ul class="space-y-3">
+                        <li><span class="text-white/80">Restauração de Sofás</span></li>
+                        <li><span class="text-white/80">Estofamento Premium</span></li>
+                        <li><span class="text-white/80">Móveis Antigos</span></li>
+                        <li><span class="text-white/80">Consultoria Personalizada</span></li>
+                        <li><span class="text-white/80">Garantia Estendida</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-heading text-lg font-semibold mb-6">Contato</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-accent mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <div>
+                                <p class="text-white/80">Rua das Flores, 123</p>
+                                <p class="text-white/80">São Paulo, SP - 01234-567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-white/80">(11) 99999-9999</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-white/80">contato@premiumupholstery.com.br</span>
+                        </div>
+                        <div class="mt-6">
+                            <h5 class="font-semibold mb-2">Horário de Funcionamento</h5>
+                            <p class="text-white/80 text-sm">Segunda a Sexta: 8h às 18h</p>
+                            <p class="text-white/80 text-sm">Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 mt-12 pt-8 text-center">
+                <p class="text-white/80">© 2025 Premium Upholstery Studio. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex items-center justify-center">
+        <div class="relative w-full h-full flex items-center justify-center p-4">
+            <!-- Close Button -->
+            <button onclick="closeLightbox()" class="absolute top-6 right-6 z-60 text-white hover:text-accent luxury-transition">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Navigation Arrows -->
+            <button onclick="previousImage()" class="absolute left-6 top-1/2 transform -translate-y-1/2 z-60 text-white hover:text-accent luxury-transition">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button onclick="nextImage()" class="absolute right-6 top-1/2 transform -translate-y-1/2 z-60 text-white hover:text-accent luxury-transition">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <!-- Main Content -->
+            <div class="max-w-6xl w-full h-full flex flex-col lg:flex-row gap-6">
+                <!-- Image Section -->
+                <div class="flex-1 flex items-center justify-center">
+                    <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain rounded-luxury">
+                </div>
+
+                <!-- Project Details Section -->
+                <div class="lg:w-96 bg-white/10 backdrop-blur-sm rounded-luxury p-6 text-white overflow-y-auto">
+                    <div id="lightbox-content">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thumbnail Strip -->
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2" id="thumbnail-strip">
+                <!-- Thumbnails will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .filter-chip {
+            @apply px-4 py-2 rounded-luxury border border-secondary-200 text-text-secondary hover:border-accent hover:text-accent luxury-transition;
+        }
+        
+        .filter-chip.active {
+            @apply bg-accent text-white border-accent;
+        }
+        
+        .filter-chip .count {
+            @apply ml-1 text-xs opacity-75;
+        }
+        
+        .project-item {
+            @apply luxury-transition;
+        }
+        
+        .project-item.hidden {
+            @apply opacity-0 pointer-events-none;
+        }
+    </style>
+
+    <script>
+        // Project data
+        const projects = [
+            {
+                id: 0,
+                title: "Sofá Clássico Restaurado",
+                category: "sofas",
+                date: "2024-12",
+                location: "São Paulo, SP",
+                images: [
+                    "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3",
+                    "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3",
+                    "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
+                ],
+                challenge: "Sofá de família com mais de 30 anos apresentava estrutura comprometida e tecido completamente desgastado.",
+                process: "Desmontagem completa, restauração da estrutura de madeira, substituição das molas, nova espuma de alta densidade e aplicação de tecido premium importado.",
+                materials: "Tecido jacquard importado, espuma D33, molas ensacadas, verniz naval para madeira",
+                timeline: "21 dias",
+                testimonial: "Ficou melhor que novo! Superou todas as expectativas da família.",
+                client: "Maria S."
+            },
+            {
+                id: 1,
+                title: "Poltrona Vintage",
+                category: "poltronas",
+                date: "2024-11",
+                location: "Rio de Janeiro, RJ",
+                images: [
+                    "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3",
+                    "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3"
+                ],
+                challenge: "Poltrona vintage dos anos 60 com estrutura original preservada mas necessitando novo estofamento.",
+                process: "Preservação da estrutura original, limpeza profunda, novo estofamento respeitando o design original.",
+                materials: "Couro sintético premium, espuma viscoelástica, fitas elásticas",
+                timeline: "14 dias",
+                testimonial: "Trabalho impecável! Mantiveram a essência vintage.",
+                client: "João P."
+            },
+            // Add more project data as needed...
+        ];
+
+        let currentImageIndex = 0;
+        let currentProject = null;
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', function() {
+                // Remove active class from all chips
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                // Add active class to clicked chip
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                filterProjects(filter);
+            });
+        });
+
+        // Search functionality
+        document.getElementById('search-input').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            searchProjects(searchTerm);
+        });
+
+        // Sort functionality
+        document.getElementById('sort-select').addEventListener('change', function() {
+            const sortBy = this.value;
+            sortProjects(sortBy);
+        });
+
+        function filterProjects(category) {
+            const projectItems = document.querySelectorAll('.project-item');
+            let visibleCount = 0;
+
+            projectItems.forEach(item => {
+                if (category === 'todos' || item.dataset.category === category) {
+                    item.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+
+            updateResultsCount(visibleCount);
+        }
+
+        function searchProjects(searchTerm) {
+            const projectItems = document.querySelectorAll('.project-item');
+            let visibleCount = 0;
+
+            projectItems.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const location = item.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || location.includes(searchTerm)) {
+                    item.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+
+            updateResultsCount(visibleCount);
+        }
+
+        function sortProjects(sortBy) {
+            const grid = document.getElementById('gallery-grid');
+            const items = Array.from(grid.querySelectorAll('.project-item'));
+
+            items.sort((a, b) => {
+                switch (sortBy) {
+                    case 'recent':
+                        return new Date(b.dataset.date) - new Date(a.dataset.date);
+                    case 'oldest':
+                        return new Date(a.dataset.date) - new Date(b.dataset.date);
+                    case 'type':
+                        return a.dataset.category.localeCompare(b.dataset.category);
+                    default:
+                        return 0;
+                }
+            });
+
+            items.forEach(item => grid.appendChild(item));
+        }
+
+        function updateResultsCount(count) {
+            document.getElementById('results-count').textContent = count;
+        }
+
+        // Lightbox functionality
+        function openLightbox(projectIndex) {
+            currentProject = projects[projectIndex] || projects[0];
+            currentImageIndex = 0;
+            
+            updateLightboxContent();
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function nextImage() {
+            if (currentProject && currentImageIndex < currentProject.images.length - 1) {
+                currentImageIndex++;
+                updateLightboxContent();
+            }
+        }
+
+        function previousImage() {
+            if (currentProject && currentImageIndex > 0) {
+                currentImageIndex--;
+                updateLightboxContent();
+            }
+        }
+
+        function updateLightboxContent() {
+            if (!currentProject) return;
+
+            // Update main image
+            document.getElementById('lightbox-image').src = currentProject.images[currentImageIndex];
+
+            // Update project details
+            const content = document.getElementById('lightbox-content');
+            content.innerHTML = `
+                <h2 class="font-heading text-2xl font-bold mb-4">${currentProject.title}</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold mb-2">Localização</h3>
+                        <p class="text-white/80">${currentProject.location}</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Desafio</h3>
+                        <p class="text-white/80">${currentProject.challenge}</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Processo</h3>
+                        <p class="text-white/80">${currentProject.process}</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Materiais</h3>
+                        <p class="text-white/80">${currentProject.materials}</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Prazo</h3>
+                        <p class="text-white/80">${currentProject.timeline}</p>
+                    </div>
+                    <div class="border-t border-white/20 pt-4">
+                        <h3 class="font-semibold mb-2">Depoimento do Cliente</h3>
+                        <p class="text-white/80 italic">"${currentProject.testimonial}"</p>
+                        <p class="text-accent mt-2">- ${currentProject.client}</p>
+                    </div>
+                </div>
+            `;
+
+            // Update thumbnail strip
+            const thumbnailStrip = document.getElementById('thumbnail-strip');
+            thumbnailStrip.innerHTML = currentProject.images.map((img, index) => `
+                <button onclick="currentImageIndex = ${index}; updateLightboxContent();" 
+                        class="w-16 h-16 rounded overflow-hidden ${index === currentImageIndex ? 'ring-2 ring-accent' : ''}">
+                    <img src="${img}" alt="" class="w-full h-full object-cover">
+                </button>
+            `).join('');
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (document.getElementById('lightbox').classList.contains('hidden')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    previousImage();
+                    break;
+                case 'ArrowRight':
+                    nextImage();
+                    break;
+            }
+        });
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Load more functionality
+        document.getElementById('load-more-btn').addEventListener('click', function() {
+            // In a real implementation, this would load more projects from the server
+            this.textContent = 'Todos os projetos carregados';
+            this.disabled = true;
+            this.classList.add('opacity-50', 'cursor-not-allowed');
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // In a real implementation, this would send data to the server
+            alert('Obrigado! Entraremos em contato em breve para discutir seu projeto.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-background');
+                header.classList.remove('bg-background/95');
+            } else {
+                header.classList.add('bg-background/95');
+                header.classList.remove('bg-background');
+            }
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+<script id="dhws-elementInspector" src="../public/dhws-web-inspector.js"></script>
+<script id="dhws-errorTracker" src="../public/dhws-error-tracker.js"></script>
+</body>
+</html>

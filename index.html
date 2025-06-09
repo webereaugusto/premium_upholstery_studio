@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restauração de Móveis de Luxo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #F8F6F3 0%, #FEFEFE 100%);
+            font-family: 'Source Sans Pro', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .redirect-container {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(139, 69, 19, 0.1);
+            max-width: 500px;
+            margin: 2rem;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            color: #6B5B4F;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #D2B48C;
+            border-top: 3px solid #DAA520;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .page-links {
+            display: grid;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+        
+        .page-link {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            background: #F8F6F3;
+            color: #2C1810;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid #6B5B4F;
+            transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+            font-weight: 400;
+        }
+        
+        .page-link:hover {
+            background: #DAA520;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+        }
+        
+        .auto-redirect-text {
+            color: #6B5B4F;
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="logo">Restauração Premium</div>
+        <div class="subtitle">Artesanato de luxo para móveis únicos</div>
+        
+        <div class="loading-spinner"></div>
+        <p>Redirecionando para a página inicial...</p>
+        
+        <div class="page-links">
+            <a href="pages/homepage.html" class="page-link">Página Inicial</a>
+            <a href="pages/servi_os.html" class="page-link">Serviços</a>
+            <a href="pages/galeria_de_projetos.html" class="page-link">Galeria de Projetos</a>
+            <a href="pages/sobre_n_s.html" class="page-link">Sobre Nós</a>
+            <a href="pages/contato_e_or_amento.html" class="page-link">Contato e Orçamento</a>
+        </div>
+        
+        <div class="auto-redirect-text">
+            Você será redirecionado automaticamente em <span id="countdown">3</span> segundos.
+        </div>
+    </div>
+
+    <script>
+        // Auto redirect to homepage after 3 seconds
+        let countdown = 3;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'pages/homepage.html';
+            }
+        }, 1000);
+        
+        // Allow manual navigation
+        document.querySelectorAll('.page-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                clearInterval(timer);
+            });
+        });
+    </script>
+  <script id="dhws-errorTracker" src="/public/dhws-error-tracker.js"></script>
+  <script id="dhws-elementInspector" src="/public/dhws-web-inspector.js"></script>
+<script id="dhws-dataInjector" src="public/dhws-data-injector.js"></script>
+</body>
+</html>
